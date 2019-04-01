@@ -56,9 +56,10 @@ while comp == None:
             if num == company.id:
                 comp = company
                 continue
-        print("Whoops, that doesn't seem to be an option. Try again!")
+        if comp == None:
+            print("Whoops, that doesn't seem to be an option. Try again!")
     except:
-        print("Whoops, that doesn't seem to be an option. Try again!")
+        print("Please enter an integer ;)")
 
 person = None
 while person == None:
@@ -70,9 +71,10 @@ while person == None:
             if num == guest.id:
                 person = guest
                 continue
-        print("Whoops, that doesn't seem to be an option. Try again!")
+        if person == None:
+            print("Whoops, that doesn't seem to be an option. Try again!")
     except:
-        print("Whoops, that doesn't seem to be an option. Try again!")
+        print("Please enter an integer ;)")
 
 
 active.loadValues(comp)
