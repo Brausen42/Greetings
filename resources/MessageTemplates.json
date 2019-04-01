@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "message": "${GREETING} ${GUEST.FIRSTNAME}, and welcome to ${COMPANY.COMPANY}! Room ${RESERVATION.ROOMNUMBER} is now ready for you. Enjoy your stay, and let us know if you need anything."
+  },
+  {
+    "id": 2,
+    "defaults": {
+      "EXPANDED_GREETING": "${GREETING} ${GUEST.FIRSTNAME}, and welcome to ${COMPANY.COMPANY}! Now with even more greeting!!"
+    },
+    "message": "${EXPANDED_GREETING} Room ${RESERVATION.ROOMNUMBER} is now ready for you. Enjoy your stay, and let us know if you need anything."
+  }
+]
+  
