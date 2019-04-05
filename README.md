@@ -15,19 +15,17 @@ The reason for splitting the Classes the way I did, was to group the data into i
 I picked Python as the language to use since it's one that I have a lot of experience with. However, it was a tough choice between Python and Typescript as I've been using Typescript more often in recent times. Both languages offer Object Oriented Programming concepts along with some fun and useful functional programming utility that I enjoy (notably function closures). Both are also quick and easy to write, with Typescript having the advantage of Type safety upon transpiling.
 
 ## Verifying correctness
-My process for verifying correctness was two part. First, was thinking through the logic I was using and double checking that there weren't any holes in the logic which focused on the use cases of the project and ensuring that it was possible to do everything that might be useful. Second, was actually testing the project with real values. This meant normal values, and weird edge cases such as missing values, '$' characters, or almost tokens e.g. "{ALMOST}". Even more rigorous testing could be done with full coverage unit testing given more time.
+My process for verifying correctness was two part. First, was designing the logic in a way that was not overly complex in a way that is hard to conceptually grasp all the ways it can be used (right and wrong). Second, was actually testing the project with a variety of values. This meant normal values, and weird edge cases such as missing values, '$' characters, or almost tokens e.g. "{ALMOST}". Even more rigorous testing could be done with full coverage unit testing to ensure future updates don't break existing functionality.
 
-## Things I would add with more time
-* A slightly more detailed README
+## Potential Improvements
 * A more user-friendly main program to use with the project
 * More pre-built MessageTemplates
-* Better error and edge-case checking
-  * Notably, elegantly handle the potential for an infinite loop when two tokens 'open up' to reveal one another
+* Handle errors that are thrown
+  * Not being handled right now since there's no good default behavior. This would be handled before being put in production.
 * ID uniqueness enforcement
-* Useful derived tokens for different 'Tokenizable' objects
-  * e.g. GUEST.FULLNAME from GUEST.FIRSTNAME and GUEST.LASTNAME
+  * Create a class that can be used to instantiate a static uniqueID object that is used to create new IDs 
 * Unit tests to ensure code reliability
 * RESTful web services that expose the project's functionality in a language agnostic way
 * A web-based front end to make interacting with the data more enjoyable
-* The ability to save back custom MessageTemplates to the 'database'
+* The ability to load and save all the objects with a database
 * A 'setup.py' to better track the package

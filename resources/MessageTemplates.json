@@ -6,9 +6,18 @@
   {
     "id": 2,
     "defaults": {
-      "EXPANDED_GREETING": "${GREETING} ${GUEST.FIRSTNAME}, and welcome to ${COMPANY.COMPANY}! Now with even more greeting!!"
+      "EXPANDED_GREETING": "${GREETING} ${GUEST.FULLNAME}, and welcome to ${COMPANY.COMPANY}! Now with even more {greeting} for only $10.99!!",
+      "TIMEZONE": "US/Mountain"
     },
     "message": "${EXPANDED_GREETING} Room ${RESERVATION.ROOMNUMBER} is now ready for you. Enjoy your stay, and let us know if you need anything."
+  },
+  {
+    "id": 3,
+    "defaults": {
+      "THIS": "AND ${THAT}",
+      "THAT": "AND ${THIS}"
+    },
+    "message": "Dinner is later, for now you can have ${THIS}. (This message is intended to error)"
   }
 ]
   
