@@ -10,17 +10,17 @@ notAnIntegerMsg = "Please enter an integer ;)"
 
 # load guests
 guests = []
-for guest in json.load(open("./resources/Guests.json")):
+for guest in json.load(open("../resources/Guests.json")):
     guests.append(Guest(guest))
 
 #load companies
 companies = []
-for company in json.load(open("./resources/Companies.json")):
+for company in json.load(open("../resources/Companies.json")):
     companies.append(Company(company))
 
 #load templates
 templates = []
-for template in json.load(open("./resources/MessageTemplates.json")):
+for template in json.load(open("../resources/MessageTemplates.json")):
     templates.append(MessageTemplate(template))
 
 def printGuests():
